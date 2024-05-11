@@ -44,7 +44,7 @@ filename = "./GRChombo_BBSsol02_A17q1d17p000_Res40.h5" #Pick you favourite filen
 f = h5.File(filename, "r") #Read the file
 ```
 
-You can then access the attribiutes of the file, containing additional information about the simulation and read-off their values/strings. 
+You can then access the attributes of the file, containing additional information about the simulation and read-off their values/strings. 
 
 ```python
 for key, val in f.attrs.items():
@@ -53,6 +53,8 @@ for key, val in f.attrs.items():
 For example, the attributes contain the key ```initpos1```, which is the initial position of the first star, and its value is:
 
 ```initpos1: "-0.15    8.5     0.0"```
+
+***NOTE***: The positions of the stars (```initpos1``` and ```initpos2```) are given in code units! 
 
 The attributes' keys show information required for format 1 of [LAL NR injections](https://arxiv.org/abs/1703.01076) as well as BS specific information such as central amplutudes, dephasing and many more. 
 
