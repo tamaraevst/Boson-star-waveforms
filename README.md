@@ -40,7 +40,7 @@ You first need to load the data.
 import h5py as h5
 import numpy as np
 
-filename = "./GRChombo_BBSsol02_A17q1d17p000_Res40.h5" #Pick you favourite filename
+filename = "./GRChombo_BBSsol02_A17A17q100d17p000_Res40.h5" #Pick you favourite filename
 f = h5.File(filename, "r") #Read the file
 ```
 
@@ -50,11 +50,11 @@ You can then access the attributes of the file, containing additional informatio
 for key, val in f.attrs.items():
         print("    %s: %s" % (key, val))
 ```
-For example, the attributes contain the key ```initpos1```, which is the initial position of the first star, and its value is:
+For example, the attributes contain the key ```initpos1-code-units```, which is the initial position of the first star in code units, and its value is:
 
-```initpos1: "-0.15    8.5     0.0"```
+```initpos1-code-units: "-0.16    8.76286     0.0"```
 
-***NOTE***: The positions of the stars (```initpos1``` and ```initpos2```) are given in code units! 
+***NOTE***: In order to avoid ambiguities and be as detailed as possible in the meta-data we provide, for centain meta-data, like positions and extraction radii, we report values both in code and mass units. We remark that this should simply be used as additional information for users. As the strain data provided in the files is already dimensionless and scaled appropriately, no further scalings by the individual masses of the boson stars and/or extraction radii is necessary. Of course, there will be further scalings as you start injecting these signals and assuming binaries of certain total masses and at some limunosity distances. However, this is usually taken care of in the downstream anlaysis and the parameter estimation pipeline you are using. 
 
 The attributes' keys show information required for format 1 of [LAL NR injections](https://arxiv.org/abs/1703.01076) as well as BS specific information such as central amplutudes, dephasing and many more. 
 
