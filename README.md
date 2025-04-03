@@ -1,5 +1,5 @@
 # Boson-star-waveforms
-This repository contains numerical-relativity (NR) waveforms of boson-star (BS) binaries from two independent NR codes, [GRChombo](https://github.com/GRTLCollaboration/GRChombo) and Lean. The data for each binary configuration is stored in the HDF5 format (the Hierarchical Data Format version 5) following the standards of the LIGO Algorithms Library (LAL) supoprting the simplest format 1 (see [here](https://arxiv.org/abs/1703.01076) for more details). 
+This repository contains numerical-relativity (NR) waveforms of boson-star (BS) binaries from two independent NR codes, [GRChombo](https://github.com/GRTLCollaboration/GRChombo) and Lean. The data for each binary configuration is stored in the HDF5 format (the Hierarchical Data Format version 5) following the standards of the LIGO Algorithms Library (LAL) supporting the simplest format 1 (see [here](https://arxiv.org/abs/1703.01076) for more details). 
 
 # Our conventions 
 
